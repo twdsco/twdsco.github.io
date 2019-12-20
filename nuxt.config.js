@@ -6,8 +6,8 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - 台灣數位串流有限公司',
+    title: '台灣數位串流有限公司',
     meta: [{
         charset: 'utf-8'
       },
