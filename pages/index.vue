@@ -13,7 +13,7 @@
 			</section>
 			<section>
 				<div class="landing__title">理念</div>
-				<p>發大財耶</p>
+				<p>發大財。</p>
 			</section>
 			<section>
 				<div class="landing__title">營運項目</div>
