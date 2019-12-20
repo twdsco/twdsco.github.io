@@ -1,0 +1,67 @@
+main.v-content
+    padding: 0 !important
+header.theme--dark.v-sheet
+    background-color: rgba(0, 0, 0, 0.5)
+    backdrop-filter: blur(3px)
+#header
+    background-image: url('/background.jpg')
+    background-size: 100vw
+    background-color: #010b0a
+    background-position: center -64px
+    color: #FFF
+    height: 50vh
+    min-height: 300px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    font-weight: 200
+    .header__title
+        font-size: 3em
+    .header__subtitle
+        font-size: 2em
+.landing__container
+    text-align: center
+    >section+section
+        margin-top: 32px
+.landing__title
+    font-size: 1.75rem
+    font-weight: 300
+    position: relative
+    display: inline-block
+    padding-bottom: 8px
+    margin-bottom: 8px
+    &::before
+        content: ''
+        position: absolute
+        background: #666
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        height: 3px
+        width: 1.125em
+        border-radius: 500em
+    & + p
+        line-height: 1.5em
+        font-weight: 300
+.service__item
+    border-radius: 8px
+    margin: 16px
+    padding: 16px 0
+    background-color: #010b0a
+    color: #FFF
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13)
+    .service__item__icon
+        height: 86px
+        width: 86px
+        margin: 0 auto
+        border-radius: 500em
+        background: rgba(255,255,255,.1)
+        i
+            color: #FFF
+            font-size: 86px
+            transform: scale(.5)
+    .service__item__title
+        margin-top: 8px
+        font-weight: 300
