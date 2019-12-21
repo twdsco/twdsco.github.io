@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<v-app>
 		<v-app-bar app flat dark>
 			<v-app-bar-nav-icon v-show="!$vuetify.breakpoint.mdAndUp" />
 			<v-toolbar-title :style="$vuetify.breakpoint.mdAndUp?'padding-left: 32px':''">
@@ -17,8 +17,19 @@
 		<v-content>
 			<router-view />
 		</v-content>
+		<v-footer color="primary lighten-1" padless>
+			<v-row justify="center" no-gutters>
+				<v-btn v-for="icon in icons" :key="icon" class="my-2" dark color="white" icon>
+					<v-icon size="24px">{{ icon }}</v-icon>
+				</v-btn>
+				<v-col
+					class="primary lighten-2 py-4 text-center white--text"
+					cols="12"
+				>{{ new Date().getFullYear() }} | 台灣數位串流有限公司 | 統編：83569021</v-col>
+			</v-row>
+		</v-footer>
 		<v-snackbar v-model="snackbar.show">{{snackbar.message}}</v-snackbar>
-	</div>
+	</v-app>
 </template>
 <script>
 import Vue from "vue";
@@ -31,6 +42,11 @@ export default {
 			message: ``,
 			timeout: null
 		},
+		icons: [
+			'mdi-facebook-box',
+			'mdi-twitter',
+			'mdi-instagram',
+		],
 	}),
 	destroyed() {
 	},
