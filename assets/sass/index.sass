@@ -35,10 +35,11 @@ header.theme--dark.v-sheet
     display: inline-block
     padding-bottom: 8px
     margin-bottom: 8px
+    color: #311B92
     &::before
         content: ''
         position: absolute
-        background: #666
+        background: #1976D2
         bottom: 0
         left: 0
         right: 0
@@ -53,9 +54,10 @@ header.theme--dark.v-sheet
     border-radius: 8px
     margin: 16px
     padding: 16px 0
-    background-color: #010b0a
     color: #FFF
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13)
+    transition: all .32s ease
+    background: linear-gradient(135deg, #1E88E5, #1565C0)
     .service__item__icon
         height: 86px
         width: 86px
@@ -69,3 +71,9 @@ header.theme--dark.v-sheet
     .service__item__title
         margin-top: 8px
         font-weight: 300
+    &:hover
+        box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2)
+        transform: translateY(-10px)
+        .service__item__icon
+            i
+                transform: scale(.6)
