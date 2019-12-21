@@ -18,60 +18,20 @@
 			<section>
 				<div class="landing__title">營運項目</div>
 				<v-row no-gutters>
-					<v-col md="4" cols="6">
+					<v-col md="4" cols="6" v-for="item in serviceItems" :key="item.title">
 						<div class="service__item">
 							<div class="service__item__icon">
-								<v-icon class="outline-gavel"></v-icon>
+								<v-icon>{{item.icon}}</v-icon>
 							</div>
-							<div class="service__item__title" v-show="$vuetify.breakpoint.smAndDown">
-								網路設備
-								<br />批發/零售
-							</div>
-							<div class="service__item__title" v-show="!$vuetify.breakpoint.smAndDown">網路設備批發/零售</div>
-						</div>
-					</v-col>
-					<v-col md="4" cols="6">
-						<div class="service__item">
-							<div class="service__item__icon">
-								<v-icon class="outline-devices"></v-icon>
-							</div>
-							<div class="service__item__title" v-show="$vuetify.breakpoint.smAndDown">
-								網頁應用程式
-								<br />開發與維護
-							</div>
-							<div class="service__item__title" v-show="!$vuetify.breakpoint.smAndDown">網頁應用程式開發與維護</div>
-						</div>
-					</v-col>
-					<v-col md="4" cols="6">
-						<div class="service__item">
-							<div class="service__item__icon">
-								<v-icon class="outline-adb"></v-icon>
-							</div>
-							<div class="service__item__title">系統與設備維護</div>
-						</div>
-					</v-col>
-					<v-col md="4" cols="6">
-						<div class="service__item">
-							<div class="service__item__icon">
-								<v-icon class="outline-check"></v-icon>
-							</div>
-							<div class="service__item__title">應用程式解決方案</div>
-						</div>
-					</v-col>
-					<v-col md="4" cols="6">
-						<div class="service__item">
-							<div class="service__item__icon">
-								<v-icon class="outline-storage"></v-icon>
-							</div>
-							<div class="service__item__title">網站代管營運</div>
-						</div>
-					</v-col>
-					<v-col md="4" cols="6">
-						<div class="service__item">
-							<div class="service__item__icon">
-								<v-icon class="outline-widgets"></v-icon>
-							</div>
-							<div class="service__item__title">容器化解決方案</div>
+							<div
+								class="service__item__title"
+								v-show="!$vuetify.breakpoint.smAndDown||!item.rwdTitle"
+							>{{item.title}}</div>
+							<div
+								class="service__item__title"
+								v-show="$vuetify.breakpoint.smAndDown&&item.rwdTitle"
+								v-html="item.rwdTitle"
+							></div>
 						</div>
 					</v-col>
 				</v-row>
@@ -82,6 +42,14 @@
 <script>
 export default {
 	data: () => ({
+		serviceItems: [
+			{ icon: 'mdi-store', title: '網路設備批發/零售', rwdTitle: '網路設備<br/>批發/零售' },
+			{ icon: 'mdi-cellphone-link', title: '網頁應用程式開發與維護', rwdTitle: '網頁應用程式<br/>開發與維護' },
+			{ icon: 'mdi-android-debug-bridge', title: '系統與設備維護' },
+			{ icon: 'mdi-checkbox-marked-circle-outline', title: '應用程式解決方案' },
+			{ icon: 'mdi-web', title: '網站代管營運' },
+			{ icon: 'mdi-widgets', title: '容器化解決方案' },
+		]
 	}),
 	destroyed() {
 	},
