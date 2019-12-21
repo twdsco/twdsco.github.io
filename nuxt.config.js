@@ -6,7 +6,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - 台灣數位串流有限公司',
+    titleTemplate: '%s',
     title: '台灣數位串流有限公司',
     meta: [{
         charset: 'utf-8'
