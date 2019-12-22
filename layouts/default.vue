@@ -19,8 +19,17 @@
 		</v-content>
 		<v-footer color="primary lighten-1" padless>
 			<v-row justify="center" no-gutters>
-				<v-btn v-for="icon in icons" :key="icon" class="my-2" dark color="white" icon>
-					<v-icon size="24px">{{ icon }}</v-icon>
+				<v-btn
+					v-for="item in socialLinks"
+					:key="item.icon"
+					:href="item.link"
+					target="_blank"
+					class="my-2"
+					dark
+					color="white"
+					icon
+				>
+					<v-icon size="24px">{{ item.icon }}</v-icon>
 				</v-btn>
 				<v-col
 					class="primary lighten-2 py-4 text-center white--text"
@@ -42,10 +51,9 @@ export default {
 			message: ``,
 			timeout: null
 		},
-		icons: [
-			'mdi-facebook-box',
-			'mdi-twitter',
-			'mdi-instagram',
+		socialLinks: [
+			{ icon: 'mdi-facebook-box', link: '#' },
+			{ icon: 'mdi-github-circle', link: '#' },
 		],
 	}),
 	destroyed() {
