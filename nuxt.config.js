@@ -8,6 +8,9 @@ export default {
   head: {
     titleTemplate: '%s',
     title: '台灣數位串流有限公司',
+    htmlAttrs: {
+      lang: 'zh-Hant',
+    },
     meta: [{
         charset: 'utf-8'
       },
