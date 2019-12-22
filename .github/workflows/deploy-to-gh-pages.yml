@@ -21,3 +21,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: dist
+    - name: GitHubs Pages Build
+      run: |
+        curl -u gnehs:${{ secrets.GITHUB_TOKEN }} -X POST https://api.github.com/repos/${{ github.repository }}/pages/builds -H "Accept: application/vnd.github.mister-fantastic-preview+json"'
