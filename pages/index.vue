@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<div id="header">
+		<div id="banner">
 			<div class="container">
-				<p class="header__title">台灣數位串流有限公司</p>
-				<p class="header__subtitle">Taiwan Digital Streaming Co.</p>
+				<p class="banner__title">台灣數位串流有限公司</p>
+				<p class="banner__subtitle">Taiwan Digital Streaming Co.</p>
 			</div>
 		</div>
 		<div class="container landing__container">

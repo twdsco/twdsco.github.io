@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-app-bar app flat dark>
+		<v-app-bar app :flat="appbarDark" :color="appbarDark?'':'primary'" dark>
 			<v-app-bar-nav-icon v-show="!$vuetify.breakpoint.mdAndUp" />
 			<v-toolbar-title :style="$vuetify.breakpoint.mdAndUp?'padding-left: 32px':''">
 				<span>台灣數位串流有限公司</span>
@@ -46,6 +46,7 @@ export default {
 	name: "App",
 	data: () => ({
 		drawer: null,
+		appbarDark: true,
 		snackbar: {
 			show: false,
 			message: ``,
@@ -56,7 +57,11 @@ export default {
 			{ icon: 'mdi-github-circle', link: '#' },
 		],
 	}),
+	mounted() {
+		window.addEventListener('scroll', this.handleScroll);
+	},
 	destroyed() {
+		window.removeEventListener('scroll', this.handleScroll);
 	},
 	created() {
 		//註冊點心條組件
@@ -69,10 +74,15 @@ export default {
 				duration
 			);
 		};
-
+		window.addEventListener('scroll', this.handleScroll);
 	},
 	methods: {
-
+		handleScroll(event) {
+			let scrollTop = window.scrollTop;
+			let rect = document.querySelector('#banner').getBoundingClientRect()
+			let rectAppbar = document.querySelector('header').getBoundingClientRect()
+			this.appbarDark = rect.y * -1 < rect.height - rectAppbar.height
+		},
 	}
 };
 </script>
