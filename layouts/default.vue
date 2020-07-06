@@ -1,18 +1,18 @@
 <template>
 	<v-app>
 		<v-app-bar app :flat="appbarDark" :color="appbarDark?'':'primary'" dark>
-			<v-app-bar-nav-icon v-show="!$vuetify.breakpoint.mdAndUp" />
+			<!--<v-app-bar-nav-icon v-show="!$vuetify.breakpoint.mdAndUp" />-->
 			<v-toolbar-title :style="$vuetify.breakpoint.mdAndUp?'padding-left: 32px':''">
 				<span>台灣數位串流有限公司</span>
 			</v-toolbar-title>
 			<v-spacer />
-			<v-toolbar-items v-show="$vuetify.breakpoint.mdAndUp">
+			<!--<v-toolbar-items v-show="$vuetify.breakpoint.mdAndUp">
 				<v-btn text>首頁</v-btn>
 				<v-btn text>簡介</v-btn>
 				<v-btn text>理念</v-btn>
 				<v-btn text>營運項目</v-btn>
 				<v-btn text>自主開發商品</v-btn>
-			</v-toolbar-items>
+			</v-toolbar-items>-->
 		</v-app-bar>
 		<v-content>
 			<router-view />
