@@ -31,10 +31,13 @@
 				>
 					<v-icon size="24px">{{ item.icon }}</v-icon>
 				</v-btn>
-				<v-col
-					class="primary lighten-2 py-4 text-center white--text"
-					cols="12"
-				>{{ new Date().getFullYear() }} | 台灣數位串流有限公司 | 統編：83569021</v-col>
+				<v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
+					{{ new Date().getFullYear() }} | 台灣數位串流有限公司 | 統編：83569021 |
+					<a
+						href="mailto:contact@twds.tw"
+						style="color:#FFF"
+					>contact@twds.tw</a>
+				</v-col>
 			</v-row>
 		</v-footer>
 		<v-snackbar v-model="snackbar.show">{{snackbar.message}}</v-snackbar>
@@ -53,8 +56,8 @@ export default {
 			timeout: null
 		},
 		socialLinks: [
-			{ icon: 'mdi-facebook-box', link: '#' },
-			{ icon: 'mdi-github-circle', link: '#' },
+			{ icon: 'mdi-facebook', link: '#' },
+			{ icon: 'mdi-github', link: '#' },
 		],
 	}),
 	mounted() {
