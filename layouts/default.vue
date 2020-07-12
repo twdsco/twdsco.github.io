@@ -19,7 +19,7 @@
 		</v-content>
 		<v-footer color="primary lighten-1" padless>
 			<v-row justify="center" no-gutters>
-				<v-btn
+				<!--<v-btn
 					v-for="item in socialLinks"
 					:key="item.icon"
 					:href="item.link"
@@ -30,7 +30,7 @@
 					icon
 				>
 					<v-icon size="24px">{{ item.icon }}</v-icon>
-				</v-btn>
+				</v-btn>-->
 				<v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
 					{{ new Date().getFullYear() }} | 台灣數位串流有限公司 | 統編：83569021 |
 					<a
