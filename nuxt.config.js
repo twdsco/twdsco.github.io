@@ -25,6 +25,12 @@ export default {
       { rel: 'icon', href: '/logo/twds.png' }
     ]
   },
+  pwa: {
+    meta: {
+      name: '台灣數位串流有限公司',
+      description: '台灣數位串流有限公司'
+    }
+  },
   /*
    ** Customize the progress-bar color
    */
