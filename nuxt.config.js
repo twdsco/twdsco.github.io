@@ -11,23 +11,19 @@ export default {
     htmlAttrs: {
       lang: 'zh-Hant',
     },
-    meta: [{
-      charset: 'utf-8'
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1'
-    },
-    {
-      hid: 'description',
-      name: 'description',
-      content: process.env.npm_package_description || ''
-    }
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '發源自開源社群、擁抱，並持續貢獻於開源社群，在注重開源的同時不忘資安上的保護。' },
+      { hid: 'og:title', property: 'og:title', content: '台灣數位串流有限公司' },
+      { hid: 'og:description', property: 'og:description', content: '發源自開源社群、擁抱，並持續貢獻於開源社群，在注重開源的同時不忘資安上的保護。' },
+      { hid: 'og:url', property: 'og:url', content: 'https://www.twds.com.tw/' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.twds.com.tw/og.jpg' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
     ],
-    link: [{
-      rel: 'icon',
-      href: '/logo/twds.png'
-    }]
+    link: [
+      { rel: 'icon', href: '/logo/twds.png' }
+    ]
   },
   /*
    ** Customize the progress-bar color
