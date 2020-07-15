@@ -2,7 +2,7 @@
 	<div>
 		<div id="banner">
 			<div class="container">
-				<img src="/logo/twds_white.svg" class="banner__logo" width="128px" />
+				<img src="/logo/twds_cropped_white.svg" class="banner__logo" width="128px" />
 				<p class="banner__title">台灣數位串流有限公司</p>
 				<p class="banner__subtitle">Taiwan Digital Streaming Co.</p>
 			</div>
