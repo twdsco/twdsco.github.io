@@ -17,23 +17,26 @@ header.theme--dark.v-sheet
     justify-content: center
     align-items: center
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-    font-weight: 200
+    font-weight: bold
     .banner__title
         font-size: 3em
     .banner__subtitle
         font-size: 2em
+    img
+        float: left
 
 @media screen and (max-width: 600.99px)
     #banner
         font-size: 10px
         text-align: center
+        img
+            float: none
 .landing__container
     text-align: center
     >section+section
         margin-top: 32px
 .landing__title
     font-size: 1.75rem
-    font-weight: 300
     position: relative
     display: inline-block
     padding-bottom: 8px
@@ -52,7 +55,6 @@ header.theme--dark.v-sheet
         border-radius: 500em
     & + p
         line-height: 1.5em
-        font-weight: 300
 .service__item
     border-radius: 8px
     margin: 16px
@@ -73,4 +75,3 @@ header.theme--dark.v-sheet
             transform: scale(.5)
     .service__item__title
         margin-top: 8px
-        font-weight: 300
