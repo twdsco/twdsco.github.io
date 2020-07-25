@@ -37,6 +37,18 @@
 					</v-col>
 				</v-row>
 			</section>
+			<section>
+				<div class="landing__title">經銷/合作</div>
+				<div class="nakama">
+					<a
+						v-for="item of nakama"
+						:key="item.url"
+						:href="item.url"
+						target="_blank"
+						:style="{backgroundImage:`url('${item.img}')`}"
+					></a>
+				</div>
+			</section>
 		</div>
 	</div>
 </template>
@@ -50,6 +62,11 @@ export default {
 			{ icon: 'mdi-checkbox-marked-circle-outline', title: '應用程式解決方案' },
 			{ icon: 'mdi-web', title: '網站代管營運' },
 			{ icon: 'mdi-widgets', title: '容器化解決方案' },
+		],
+		nakama: [
+			{ img: "/img/nakama/proxmox.png", url: "https://www.proxmox.com" },
+			{ img: "/img/nakama/unitech.svg", url: "https://www.unitech.com.tw/" },
+
 		]
 	}),
 	destroyed() {
