@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="UA-155852877-1" />
     </html>
