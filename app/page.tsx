@@ -12,9 +12,17 @@ interface ServiceItem {
   title: string;
 }
 
-interface NakamaItem {
+interface PartnerItem {
   img: string;
   url: string;
+}
+
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="text-3xl font-bold underline decoration-blue-600 underline-offset-4 decoration-4 inline-block mb-4">
+      {children}
+    </h2>
+  );
 }
 
 export default function Home() {
@@ -27,7 +35,7 @@ export default function Home() {
     { Icon: Container, title: "容器化解決方案" },
   ];
 
-  const nakama: NakamaItem[] = [
+  const partners: PartnerItem[] = [
     { img: "proxmox.png", url: "https://www.proxmox.com" },
     { img: "unitech.svg", url: "https://www.unitech.com.tw/" },
   ];
@@ -41,30 +49,24 @@ export default function Home() {
           <img
             src="/logo/twds_white.svg"
             alt="Taiwan Digital Streaming Co. Logo"
-            className="banner__logo"
             width="128"
           />
-          <p className="banner__title text-6xl">台灣數位串流有限公司</p>
-          <p className="banner__subtitle text-4xl">
+          <h1 className="text-4xl md:text-6xl">台灣數位串流有限公司</h1>
+          <p className="text-2xl md:text-4xl mt-2">
             Taiwan Digital Streaming Co.
           </p>
         </div>
       </div>
       <div className="container mx-auto text-center my-8 flex flex-col gap-8">
-        {/* 簡介部分 */}
         <section>
-          <div className="landing__title text-3xl font-bold underline decoration-blue-600 decoration-4 mb-2 inline-block">
-            簡介
-          </div>
+          <SectionTitle>簡介</SectionTitle>
           <p>
             發源自開源社群、擁抱，並持續貢獻於開源社群，在注重開源的同時不忘資安上的保護。
           </p>
         </section>
-        {/* 營運項目 */}
+
         <section>
-          <div className="text-3xl font-bold underline decoration-blue-600 decoration-4 mb-2 inline-block">
-            營運項目
-          </div>
+          <SectionTitle>營運項目</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {serviceItems.map(({ Icon, title }, index) => (
               <div
@@ -80,13 +82,11 @@ export default function Home() {
             ))}
           </div>
         </section>
-        {/* 經銷/合作 */}
+
         <section>
-          <div className=" text-3xl font-bold underline decoration-blue-600 decoration-4 mb-2 inline-block">
-            經銷/合作
-          </div>
-          <div className=" flex justify-center items-center">
-            {nakama.map((item, index) => (
+          <SectionTitle>經銷/合作</SectionTitle>
+          <div className="flex justify-center items-center">
+            {partners.map((item, index) => (
               <a
                 key={index}
                 href={item.url}
