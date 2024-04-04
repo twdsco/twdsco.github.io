@@ -51,7 +51,7 @@ export default function Home() {
             alt="Taiwan Digital Streaming Co. Logo"
             width="128"
           />
-          <h1 className="text-4xl md:text-6xl">台灣數位串流有限公司</h1>
+          <h1 className="text-4xl md:text-5xl">台灣數位串流有限公司</h1>
           <p className="text-2xl md:text-4xl mt-2">
             Taiwan Digital Streaming Co.
           </p>
