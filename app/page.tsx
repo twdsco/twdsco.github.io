@@ -6,8 +6,9 @@ import {
   Server,
   Container,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 interface ServiceItem {
-  icon: JSX.Element;
+  Icon: LucideIcon;
   title: string;
 }
 
@@ -18,12 +19,12 @@ interface NakamaItem {
 
 export default function Home() {
   const serviceItems: ServiceItem[] = [
-    { icon: <Store size={48} />, title: "網路設備批發/零售" },
-    { icon: <AppWindowMac size={48} />, title: "網頁應用程式開發與維護" },
-    { icon: <CloudCog size={48} />, title: "系統與設備維護" },
-    { icon: <Smartphone size={48} />, title: "應用程式解決方案" },
-    { icon: <Server size={48} />, title: "網站代管營運" },
-    { icon: <Container size={48} />, title: "容器化解決方案" },
+    { Icon: Store, title: "網路設備批發/零售" },
+    { Icon: AppWindowMac, title: "網頁應用程式開發與維護" },
+    { Icon: CloudCog, title: "系統與設備維護" },
+    { Icon: Smartphone, title: "應用程式解決方案" },
+    { Icon: Server, title: "網站代管營運" },
+    { Icon: Container, title: "容器化解決方案" },
   ];
 
   const nakama: NakamaItem[] = [
@@ -65,16 +66,16 @@ export default function Home() {
             營運項目
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {serviceItems.map((item, index) => (
+            {serviceItems.map(({ Icon, title }, index) => (
               <div
                 key={index}
                 className=" bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-lg shadow-md"
               >
                 {/* 替換成Font Awesome或相似圖示系統 */}
                 <div className="flex items-center justify-center text-white mb-2">
-                  {item.icon}
+                  <Icon size={56} strokeWidth={1.5} />
                 </div>
-                <div className="text-white font-bold">{item.title}</div>
+                <div className="text-white font-bold">{title}</div>
               </div>
             ))}
           </div>
