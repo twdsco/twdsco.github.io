@@ -7,6 +7,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    backgroundImage: {
+      noise: 'url("/img/noise.svg")',
+      "noise-gradient-to-br":
+        'url("/images/noise.svg"), linear-gradient(to bottom right, var(--tw-gradient-stops))',
+    },
     container: {
       padding: {
         DEFAULT: "1rem",

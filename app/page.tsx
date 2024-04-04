@@ -19,7 +19,7 @@ interface PartnerItem {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-3xl font-bold underline decoration-blue-600 underline-offset-4 decoration-4 inline-block mb-4">
+    <h2 className="text-3xl font-bold underline decoration-blue-100 underline-offset-4 decoration-4 inline-block mb-4">
       {children}
     </h2>
   );
@@ -71,13 +71,10 @@ export default function Home() {
             {serviceItems.map(({ Icon, title }, index) => (
               <div
                 key={index}
-                className=" bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-lg shadow-md"
+                className="bg-noise bg-blue-50 text-blue-950/90 p-4 rounded flex items-center justify-center flex-col gap-2"
               >
-                {/* 替換成Font Awesome或相似圖示系統 */}
-                <div className="flex items-center justify-center text-white mb-2">
-                  <Icon size={56} strokeWidth={1.5} />
-                </div>
-                <div className="text-white font-bold">{title}</div>
+                <Icon size={56} strokeWidth={1.5} />
+                <div className="font-bold">{title}</div>
               </div>
             ))}
           </div>
