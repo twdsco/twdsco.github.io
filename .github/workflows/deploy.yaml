@@ -39,13 +39,6 @@ jobs:
         run: pnpm install
       - name: Build Pages
         run: pnpm run build
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          force_orphan: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
